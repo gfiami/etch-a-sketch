@@ -15,11 +15,12 @@ inputSize.addEventListener('change', (event) => {
 })
 
 //set starter gridSize and function to change it from the input range
-const gridElement = `<div class='gridElement'></div>`
+const gridElement = `<div class='gridElement'>A</div>`
 setGridSize()
 function setGridSize(){
+    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     gridContainer.innerHTML = '';
-    for(i=0;i<gridSize;i++){
+    for(i=0;i<gridSize**2;i++){
         gridContainer.innerHTML += gridElement
     }
 }
