@@ -1,5 +1,12 @@
 .container{
     display: grid;
+    border: solid black 1px;
     grid-template-columns: repeat(16, 1fr);
+    width: 30vw;
+    height: 30vw;
 
 }
+.gridElement:hover{
+    background-color:black;
+}
+
