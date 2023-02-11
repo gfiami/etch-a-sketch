@@ -41,7 +41,13 @@ function addEventListenerToElements(){
     gridPixels = document.querySelectorAll(".gridElement");
     gridPixels.forEach((item) => {
         item.addEventListener('mouseover', (event) => {
-            item.style.backgroundColor = 'black'
+            item.style.backgroundColor = currentColor
         })
     } )
 }
+const inputColor = document.querySelector("#color")
+let currentColor = inputColor.value
+inputColor.addEventListener('change', (event) => {
+    currentColor = inputColor.value
+})
+
