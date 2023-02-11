@@ -45,6 +45,7 @@ function addEventListenerToElements(){
         })
     } )
 }
+
 const inputColor = document.querySelector("#color")
 let currentColor = inputColor.value
 inputColor.addEventListener('change', (event) => {
