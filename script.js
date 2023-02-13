@@ -6,19 +6,19 @@ body.appendChild(gridContainer)
 
 //create event listener for set grid size
 const inputSize = document.querySelector("#gridSize")
+inputSize.addEventListener('change', (event) =>{
+    gridSize = inputSize.value
+    labelGridSize.innerHTML = `${gridSize}x${gridSize}`
+})
 const applyButton = document.querySelector("#apply")
 let gridSize = inputSize.value
 applyButton.addEventListener('click', (event) => {
-    gridSize = inputSize.value
-    labelGridSize.innerHTML = `${gridSize}x${gridSize}`
     setGridSize()
-
 })
 //variable for event listener for mouse hover => set color
 let gridPixels;
 
 //set starter gridSize and function to change it from the input range
-const gridElement = `<div class='gridElement g9'></div>`
 //start screen with default value
 setGridSize()
 
@@ -28,15 +28,20 @@ function setGridSize(){
     }
 
 function changeGridLayout(){
-    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     gridContainer.innerHTML = '';
+    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+
 }
 function addGridElement(){
-    for(i=0;i<gridSize**2;i++){
-        gridContainer.innerHTML += gridElement
-        addEventListenerToElements();
+    for(i=0;i<gridSize*gridSize;i++){
+        const gridElement = document.createElement('div')
+        gridElement.classList.add('gridElement', 'g9')
+        gridContainer.appendChild(gridElement)
+}
+addEventListenerToElements();
 
-}}
+}
 
 function addEventListenerToElements(){
     gridPixels = document.querySelectorAll(".gridElement");
