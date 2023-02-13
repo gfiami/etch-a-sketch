@@ -1,8 +1,8 @@
-const gridSizeContainer = document.querySelector('.gridSizeContainer')
+const settingsContainer = document.querySelector('.settingsContainer')
 const labelGridSize = document.querySelector("#labelGridSize")
 const gridContainer = document.createElement('div');
 gridContainer.setAttribute('class', 'container');
-gridSizeContainer.after(gridContainer)
+settingsContainer.after(gridContainer)
 
 //create event listener for set grid size
 const inputSize = document.querySelector("#gridSize")
@@ -15,6 +15,7 @@ let gridSize = inputSize.value
 applyButton.addEventListener('click', (event) => {
     setGridSize()
 })
+
 //variable for event listener for mouse hover => set color
 let gridPixels;
 
