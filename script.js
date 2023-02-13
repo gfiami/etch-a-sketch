@@ -84,6 +84,7 @@ function changeColor(pixel){
             break;
         case 'eraser':
             currentColor = 'white'
+            redefineClassEraser(pixel)
     }
     return currentColor
 }
@@ -131,5 +132,12 @@ function randomColor(){
     return randomRGB
 }
 
+//eraser reset class of grayscale
+function redefineClassEraser(pixel){
+    if(!pixel.classList.contains('g9')){
+        pixel.classList.remove(pixel.classList[1])
+        pixel.classList.add('g9')
+    }
+}
 
-//fix eraser to gray scale
+
