@@ -24,7 +24,12 @@ input#color{
     border-radius: 50%;
     border: 2px solid black;
   }
-
+  .activeButton{
+    box-shadow: 5px 8px red;   
+}
+    #color.activeRange{
+    border: dotted 1px black;
+}
 
   input[type=button] {
     background-color: orange;
