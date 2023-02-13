@@ -6,8 +6,9 @@ body.appendChild(gridContainer)
 
 //create event listener for set grid size
 const inputSize = document.querySelector("#gridSize")
+const applyButton = document.querySelector("#apply")
 let gridSize = inputSize.value
-inputSize.addEventListener('change', (event) => {
+applyButton.addEventListener('click', (event) => {
     gridSize = inputSize.value
     labelGridSize.innerHTML = `${gridSize}x${gridSize}`
     setGridSize()
