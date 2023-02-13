@@ -16,6 +16,10 @@ applyButton.addEventListener('click', (event) => {
     setGridSize()
 })
 
+const clearButton = document.querySelector('#clear')
+clearButton.addEventListener('click', (event) =>{
+    setGridSize()
+})
 //variable for event listener for mouse hover => set color
 let gridPixels;
 
