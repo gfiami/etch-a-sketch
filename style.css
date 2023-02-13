@@ -6,6 +6,95 @@
     width: 450px;
     height: 450px;
 }
+input#color{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+  }
+  input#color::-webkit-color-swatch {
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+  input#color::-moz-color-swatch {
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+
+
+  input[type=button] {
+    background-color: orange;
+    border: 1px solid black;
+    text-decoration: none;
+    color: white;
+    padding: 15px 15px;
+    cursor: pointer;
+ }
+ #colorRandom{
+    color:black;
+    background-color: #fff;
+    -webkit-animation: random 5s infinite;
+    animation: random 5s infinite;
+}
+@keyframes  random {
+   20% { background-color: red; } 
+   40% { background-color: yellow; } 
+   60% { background-color: green; } 
+   80% { background-color: blue; }
+   100% { background-color: white; }
+
+  
+
+   
+   
+}
+ @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+ #colorGray{
+    color: black;
+    background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+ }
+ #eraser{
+    background-color: beige;
+    color: black;
+ }
+ #clear{
+    color: white;
+    background: linear-gradient(to right, white 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+  }
+  
+  #clear:hover {
+    color: black;
+    background-position: left bottom;
+  }
+ 
+@media (max-width: 480px) {
+    .container{
+        display: grid;
+        border: solid black 1px;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        width: 250px;
+        height: 250px;
+    }
+  }
 .gridElement:hover{
     background-color:black;
 }
@@ -16,14 +105,15 @@
     gap: 2px;
 }
 .colorContainer{
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 7px;
 }
 .settingsContainer{
     display: flex;
     justify-content: flex-end;
-    gap: 100px;
+    gap: 20px;
 }
 .mainContainer{
     display: flex;
