@@ -1,8 +1,8 @@
-const body = document.querySelector('body')
+const gridSizeContainer = document.querySelector('.gridSizeContainer')
 const labelGridSize = document.querySelector("#labelGridSize")
 const gridContainer = document.createElement('div');
 gridContainer.setAttribute('class', 'container');
-body.appendChild(gridContainer)
+gridSizeContainer.after(gridContainer)
 
 //create event listener for set grid size
 const inputSize = document.querySelector("#gridSize")
