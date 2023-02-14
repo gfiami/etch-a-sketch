@@ -119,9 +119,6 @@ input#color{
   .activeButton{
     box-shadow: 5px 8px red;   
 }
-    #color.activeRange{
-    border: dotted 1px black;
-}
 
   input[type=button] {
     background-color: orange;

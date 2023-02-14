@@ -63,7 +63,13 @@ const inputColor = document.querySelector("#color")
 inputColor.addEventListener('change', (event) => {
     currentColor = inputColor.value
     checkInput = 'change'
-    changeFocusState(inputColor)
+    changeFocusState(buttonColor)
+})
+const buttonColor = document.querySelector('#colorButton')
+buttonColor.addEventListener('click', (event) =>{
+    currentColor = inputColor.value
+    checkInput = 'change'
+    changeFocusState(buttonColor)
 })
 
 const colorGray = document.querySelector("#colorGray")
@@ -155,19 +161,16 @@ function redefineClassEraser(pixel){
     }
 }
 
-const allInputs = [inputColor, colorGray, colorRandom, eraser ]
 
 function changeFocusState(item){
-    if(item == inputColor){
-        item.classList.add('activeRange')
-    } else{
+    const allInputs = [buttonColor, colorGray, colorRandom, eraser ]
+
         item.classList.add('activeButton')
-    }
+    
     allInputs.forEach((element)=>{
         if(element != item){
-            if(element.classList.contains('activeButton') || element.classList.contains('activeRange')){
+            if(element.classList.contains('activeButton')){
                 element.classList.remove('activeButton')
-                element.classList.remove('activeRange')
             }
             
         }
