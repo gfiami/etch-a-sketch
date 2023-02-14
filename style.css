@@ -6,6 +6,10 @@
     width: 450px;
     height: 450px;
 }
+.settingsContainer{
+  width: 500px;
+
+}
 input[type=range] {
     height: 34px;
     -webkit-appearance: none;
@@ -202,11 +206,12 @@ input#color{
     display: flex;
     align-items: center;
     gap: 7px;
+    justify-content: flex-end;
 }
 .settingsContainer{
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
 }
 .mainContainer{
     display: flex;
