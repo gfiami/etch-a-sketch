@@ -160,7 +160,10 @@ input#color{
 		background-position: 0% 50%;
 	}
 }
-
+#apply{
+  background-color: #7BBBF2;
+  color: black;
+}
  #colorGray{
     color: black;
     background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
